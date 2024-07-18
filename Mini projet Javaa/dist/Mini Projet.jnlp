@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Mini Projet.jnlp">
+  <information>
+    <title>Mini Projet</title>
+    <vendor>Mahdi</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Mini_Projet.jar" size="144289" download="eager" />
+    <jar href="lib\activation.jar" size="68453" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="843090" download="eager" />
+    <jar href="lib\webservices-api.jar" size="276995" download="eager" />
+    <jar href="lib\webservices-extra-api.jar" size="165537" download="eager" />
+    <jar href="lib\webservices-extra.jar" size="719881" download="eager" />
+    <jar href="lib\webservices-rt.jar" size="14583257" download="eager" />
+    <jar href="lib\webservices-tools.jar" size="2832008" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="miniprojetjava.MiniProjetJava"  name="Mini Projet" />
+  <update check="always"/>
+</jnlp>

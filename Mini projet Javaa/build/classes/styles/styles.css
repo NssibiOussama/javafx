@@ -1,0 +1,58 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 oct. 2023, 20:48:31
+    Author     : Mahdi
+*/
+
+
+#AnchorPane {
+    -fx-background-image: url('../images/image.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+    -fx-alignment: center; /* Center align the buttons both vertically and horizontally */
+    -fx-spacing: 10px; 
+}
+#AnchorPaneEdit{
+    -fx-background-image: url('../images/edit.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+    -fx-alignment: center; /* Center align the buttons both vertically and horizontally */
+    -fx-spacing: 10px; 
+    
+}
+
+#btnSeance, #btnEnseignant  {
+    -fx-background-color: ghostwhite ;
+    -fx-border-color: #cccccc ;
+    -fx-border-width: 1px ;
+    -fx-background-radius: 100px ;
+    -fx-border-radius: 100%;
+}
+
+#btnSeance:hover, #btnEnseignant:hover {
+    -fx-background-color: #2980b9; /* Background color on hover */
+    -fx-text-fill: #000 ;
+
+}
+
+#btnExit {
+    -fx-background-color: ghostwhite ;
+    -fx-border-color: #cccccc ;
+    -fx-border-width: 1px ;
+    -fx-background-radius: 100px ;
+    -fx-border-radius: 100%;
+    
+}
+
+#btnExit:hover {
+    -fx-background-color: orangered; /* Background color on hover */
+    -fx-text-fill: #000 ;
+
+}
+
+
+

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" focusTraversable="true" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Seance.SeanceController">
+    <stylesheets>
+        <URL value="@/styles/styles.css" />
+    </stylesheets>
+    <children>
+        <Button fx:id="btnAdvancedSearch" layoutX="285.0" layoutY="28.0" mnemonicParsing="false" onAction="#showAdvancedSearch" prefHeight="31.0" prefWidth="120.0" text="Requettes" AnchorPane.rightAnchor="410.0" AnchorPane.topAnchor="28.0">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Button>
+        <Button layoutX="490.0" layoutY="28.0" mnemonicParsing="false" onAction="#showEnseignants" prefHeight="31.0" prefWidth="120.0" text="Enseignants" AnchorPane.rightAnchor="280.0" AnchorPane.topAnchor="28.0">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Button>
+        <Button layoutX="708.0" layoutY="28.0" mnemonicParsing="false" onAction="#showEtudiants" prefHeight="31.0" prefWidth="120.0" text="Etudiants" AnchorPane.rightAnchor="150.0">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#showHome" prefHeight="31.0" prefWidth="120.0" text="Accueil" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="28.0">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Button>
+        <Label layoutX="31.0" layoutY="33.0" prefHeight="21.0" prefWidth="470.0" text="Espaces des séances de cours" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="33.0" />
+        <AnchorPane layoutY="83.0" prefHeight="617.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="83.0">
+            <children>
+                <Label layoutX="20.0" layoutY="20.0" prefHeight="21.0" prefWidth="292.0" text="Enregistrement des séance de cours" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+                <TextField fx:id="inputSearch" layoutX="421.0" layoutY="82.0" onKeyReleased="#searchSeances" prefHeight="31.0" prefWidth="559.0" AnchorPane.leftAnchor="421.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+                <ComboBox fx:id="comboClasse" layoutX="18.0" layoutY="106.0" prefHeight="31.0" prefWidth="221.0" promptText="Classe" />
+                <TextField fx:id="inputMatiere" layoutX="20.0" layoutY="183.0" prefHeight="31.0" prefWidth="221.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="183.0" />
+                <TextField fx:id="inputJour" layoutX="20.0" layoutY="263.0" prefHeight="31.0" prefWidth="221.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="263.0" />
+                <Label layoutX="20.0" layoutY="73.0" prefHeight="21.0" prefWidth="72.0" text="Classe" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="73.0" />
+                <Label layoutX="20.0" layoutY="153.0" prefHeight="21.0" prefWidth="72.0" text="Matière" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="153.0" />
+                <Label layoutX="20.0" layoutY="233.0" prefHeight="21.0" prefWidth="72.0" text="Jour" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="233.0" />
+                <Label layoutX="21.0" layoutY="322.0" prefHeight="21.0" prefWidth="72.0" text="Heure" textFill="WHITE" />
+                <TextField fx:id="inputHeure" layoutX="21.0" layoutY="352.0" prefHeight="31.0" prefWidth="221.0" />
+                <ComboBox fx:id="comboEnseignant" layoutX="21.0" layoutY="440.0" prefHeight="31.0" prefWidth="221.0" promptText="Enseignant" />
+                <Label layoutX="21.0" layoutY="407.0" prefHeight="21.0" prefWidth="160.0" text="Matricule enseignant" textFill="WHITE" />
+                <Button layoutX="21.0" layoutY="507.0" mnemonicParsing="false" onAction="#save" prefHeight="31.0" prefWidth="221.0" text="Enregistrer" AnchorPane.leftAnchor="21.0" AnchorPane.topAnchor="507.0">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+                <Label layoutX="285.0" layoutY="20.0" prefHeight="21.0" prefWidth="143.0" text="Recherche rapide" textFill="WHITE" AnchorPane.leftAnchor="285.0" AnchorPane.topAnchor="20.0" />
+                <TableView fx:id="seanceTable" layoutX="284.0" layoutY="73.0" prefHeight="524.0" prefWidth="696.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="284.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="73.0">
+                    <columns>
+                        <TableColumn fx:id="celClasse" prefWidth="75.0" text="Classe" />
+                        <TableColumn fx:id="celMatiere" prefWidth="75.0" text="Matiere" />
+                        <TableColumn fx:id="celJour" prefWidth="75.0" text="Jour" />
+                        <TableColumn fx:id="celHeure" prefWidth="75.0" text="Heure" />
+                        <TableColumn fx:id="celEnseignant" prefWidth="75.0" text="Enseignant" />
+                    </columns>
+                </TableView>
+                
+            </children>
+        </AnchorPane>
+      
+    </children>
+</AnchorPane>
